@@ -1,0 +1,39 @@
+name:                halm
+version:             0.1.0.0
+synopsis:            NGram based language model tools
+-- description:
+
+
+license:             GPL-2
+license-file:        LICENSE
+
+author:              Andrea Zito
+maintainer:          zito.andrea@gmail.com
+-- copyright:
+
+category:            Text
+
+build-type:          Simple
+
+cabal-version:       >=1.8
+
+
+library
+  hs-source-dirs: src
+  exposed-modules: Text.Halm.Dictionary
+
+  build-depends: base ==4.5.*
+                 , text ==0.11.*
+                 , containers ==0.5.*
+                 , unordered-containers ==0.2.*
+
+executable halm
+  hs-source-dirs: src-cli
+  main-is: Main.hs
+
+  -- Modules included in this executable, other than Main.
+  -- other-modules:
+
+  -- Other library packages from which modules are imported.
+  build-depends:       base ==4.5.*
+                       , halm
